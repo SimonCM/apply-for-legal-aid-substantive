@@ -3,7 +3,16 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-  Apply for legal aid
+Apply for legal aid - Benefits checker
+{% endblock %}
+
+{% block pageScripts %}
+<script type="text/javascript">
+  function load() {
+    window.location.href = "passported";
+  }
+  window.onload = setTimeout(load, 5000);;
+</script>
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,42 +27,18 @@
 
 {% block content %}
 
-<head>
-
-  <script type="text/javascript">
-    function load() {
-      window.location.href = "means_assessment_required";
-    }
-    window.onload = setTimeout(load, 5000);;
-  </script>
-
-</head>
-
-
-<body>
-  <div class="govuk-width-container">
-
-    <main role="main" class="govuk-main-wrapper">
-
-
-      <div class="govuk-grid">
-        <div class="govuk-grid__item govuk-grid__item--two-thirds">
-
-          <p></p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
 
           <div align="center"><a href="means_assessment_required"><img src="/public/images/loading.gif"></a></div>
 
           <div align="center">
 
-              <p align="center" class="govuk-body govuk-!-font-size-24" style="width:500px;">Checking your client's details with the Department for Work and Pensions</p>
+            <p align="center" class="govuk-body govuk-!-font-size-24" style="width:500px;">Checking your client's details with the Department for Work and Pensions</p>
 
           </div>
         </div>
       </div>
-    </main>
-  </div>
-</body>
-
 
 {% endblock %}
 

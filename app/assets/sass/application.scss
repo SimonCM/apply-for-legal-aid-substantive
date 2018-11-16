@@ -19,12 +19,14 @@ $govuk-global-styles: true;
 }
 
 
-div.proceeding-item {
-    margin-top: 20px;
+div.proceeding-list {
     padding: 0px;
     border-bottom: 1px solid #ccc;
 }
 
+div.proceeding-list:hover {
+    background-color: #e7f4fb;
+}
 
 div.no-results {
     margin-left: 0px;
@@ -36,5 +38,29 @@ div.no-results {
 .change-link {
   color: #005ea5;
   text-decoration: underline;
+}
 
+.statute {
+  padding-bottom: 20px;
+}
+
+ul.proceeding-list {
+    padding: 0px;
+    margin-top: 22px;
+}
+
+li.proceeding__list-item {
+display: inline-block;
+}
+
+.proceeding-item {
+  margin-bottom: 5px;
+}
+
+p.postcode_change {
+display: inline-block;
+}
+
+div.clear-search {
+  padding-top: 8px;
 }

@@ -17,7 +17,7 @@
 
   {{ govukBackLink({
   text: "Back",
-  href: "postcode_finder"
+  href: "postcode_finder_2"
 }) }}
 
 {% endblock %}
@@ -29,22 +29,24 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
-          <h2 class="govuk-panel__title">
-            'Client name' <br>receives a qualifying benefit
-          </h2>
+          <!-- <h1 class="govuk-panel__title">
+            {{ data['client-first-name'] }} {{ data['client-last-name'] }}
+          </h1>
+          <div class="govuk-panel__body">
+            receives a qualifying benefit
+          </div> -->
+          <h1 class="govuk-panel__body govuk-!-font-size-48">
+            {{ data['client-first-name'] }} {{ data['client-last-name'] }}</h1>
+
+            <h2 class="govuk-panel__title">
+            receives a qualifying benefit</h2>
         </div>
 
 <div class="govuk-!-padding-top-4"></div>
 
         <h3 class="govuk-heading-m">Your client's tax and benefits status</h3>
 
-        <p class="govuk-body">Your client receives the following benefits that qualify for legal aid:</p>
-
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Income-based Jobseeker’s Allowance</li>
-        </ul>
-
-        <p class="govuk-body">Your client's gross income is less than £2,657.00 a month</p>
+        <p class="govuk-body">Your client receives benefits that qualify for legal aid.</p>
 
         <h3 class="govuk-heading-m">What happens next</h3>
 
@@ -52,7 +54,7 @@
           Your client will have to declare whether they have any savings, own a home or anything else that can pay for legal aid.
         </p>
 
-<a href="email_address" role="button" class="govuk-button">
+<a href="check_answers" role="button" class="govuk-button">
   Continue
 </a>
 

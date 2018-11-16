@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-  Apply for legal aid
+  Apply for legal aid - Proceedings
 {% endblock %}
 
 {% block pageScripts %}
@@ -28,63 +28,53 @@ $('#search').hideseek({
   }) }}
 
   {{ govukBackLink({
-  text: "Home",
-  href: "/dashboard"
-}) }}
-
+    text: "Home",
+      href: "/dashboard"
+  }) }}
 {% endblock %}
-
 
 {% block content %}
 
-<div class="govuk-width-container">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What does your client want legal aid for?</h1>
+      </div>
+    </div>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        What does your client want legal aid for?
-      </h1>
-    </legend>
+    <div id="search-field" class="govuk-form-group">
 
-  </fieldset>
-</div>
-</div>
-</div>
+      <label class="govuk-heading-m" for="search">
+        Search for legal proceedings
+          <span class="govuk-hint">
+            For example by category of law, matter type or legal proceeding
+          </span>
+      </label>
 
-      <div id="search-field" class="govuk-form-group">
-        <label class="govuk-heading-m" for="reference-number" style="margin-bottom: 10px">
-          Search for legal proceedings
-            <span class="govuk-caption-m">
-              For example by category of law, matter type or legal proceeding
-
-            </span>
-        </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="two-thirds" type="text" data-list="#proceedings-list">
-            <a class="clear-search" href="/search" style="margin-left: 10px; font-size: 19px">Clear search</a>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <input class="govuk-input" id="search" name="two-thirds" type="text" data-list="#proceedings-list">
+        </div>
+        <div class="govuk-grid-column-one-third clear-search">
+          <p><a class="govuk-link" href="/search">Clear search</a></p>
+        </div>
       </div>
 
-
-<div class="govuk-grid-row">
-
-
-
-    <div id="proceedings-list" class="govuk-grid-column-full ">
+      <div class="govuk-grid-row">
+        <div id="proceedings-list" class="govuk-grid-column-full ">
 
         {% for proceeding in proceedings -%}
-        <div id="offence-item-{{loop.index}}" class="govuk-grid-row proceeding-item">
+        <div class="govuk-grid-row proceeding-list" id="offence-item-{{loop.index}}" >
 
             <div class="govuk-grid-column-two-thirds">
 
-              <a class="govuk-caption-m">{{proceeding.categoryoflaw| capitalize}} > {{proceeding.mattertype | capitalize}}</a>
-                <span class="govuk-body">{{proceeding.proceedingtype | capitalize}}</span>
-
+                <ul class="proceeding-list">
+                  <h3 class="govuk-body proceeding-item">{{proceeding.proceedingtype | capitalize}}</h3>
+                  <li class="govuk-caption-m proceeding__list-item">{{proceeding.categoryoflaw| capitalize}}</li>
+                  <li class="govuk-caption-m proceeding__list-item"> > {{proceeding.mattertype | capitalize}}</li>
+                </ul>
             </div>
 
-            <div class="govuk-grid-column-one-third" style="text-align:right;">
+            <div class="govuk-grid-column-one-third" style="text-align:right; padding-top: 25px;">
                 <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="client_details">
                     Select and continue
                 </a>
@@ -94,29 +84,6 @@ $('#search').hideseek({
         {%- endfor %}
 
     </div>
-
-</div>
-
-<!-- <details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Help with completing this application
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>For any queries about your application, contact the following:
-      <br><br>
-          Case enquires (Monday to Friday, 09:00 - 17:00) <br>
-                Phone: 0300 200 2020
-		    <br><br>
-		        Technical support (Monday to Friday, 09:00 - 17:00) <br>
-		           Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
-		              Phone: 0300 200 2020
-		</p>
-  </div>
-</details> -->
-
-
 </div>
 
 {% endblock %}

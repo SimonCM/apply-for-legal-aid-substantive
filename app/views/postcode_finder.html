@@ -4,137 +4,55 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-  Apply for legal aid
-{% endblock %}
-
-{% block pageScripts %}
-<script>
-
-</script>
+Apply for legal aid - Correspondence address lookup
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-tag: {
-  text: "prototype"
-},
-html: 'This is a new service – your <a class="govuk-link" href="">feedback</a> will help us to improve it.'
-}) }}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
 
-{{ govukBackLink({
-text: "Back",
-href: "/client_details"
-}) }}
+  {{ govukBackLink({
+    text: "Back",
+      href: "/client_details"
+  }) }}
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Enter a correspondence address for your client
-    </h1>
-  </legend>
+        <h1 class="govuk-heading-xl">Enter a correspondence address for your client</h1>
 
-  <div class="govuk-!-padding-bottom-8"></div>
-
-      <form action="postcode_finder_2" id="mock-address-lookup" method="post" class="form">
-
-
-
-<div class="address-lookup-step1">
-        <div class="govuk-form-group">
-            <label class="govuk-label" for="address-postcode">
-            Enter postcode
-            </label>
-            <span id="postcode-hint" class="govuk-hint">
-              Postcode must be a valid UK postcode.
-            </span>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-
-        </div>
-
-        <input class="govuk-button" type="submit" value="Find address">
-
-        <p>
-          <a class="govuk-link" href="manual_address">Enter address manually</a>
-        </p>
-
-        <!-- <details class="govuk-details">
-      <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      No fixed address
-      </span>
-      </summary>
-      <div class="govuk-details__text">
-        <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-
-      <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="changed-name-1">
-            Yes
-          </label>
-        </div>
-
-      </div>
-    </fieldset>
-  </div>
-      </div>
-      </details> -->
-
-</div>
-
-          </div>
-          </div>
-
-
-<!--
-        <div class="address-lookup-step2">
+        <form action="/postcode_finder_2" method="post" novalidate>
           <div class="govuk-form-group">
 
-            <label class="govuk-label" for="address-postcode">
-            Postcode
-            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body change-link" id="change-address" >Change</a></p>
+              <label class="govuk-label" for="postcode">
+                Postcode
+              </label>
+              <span id="postcode-hint" class="govuk-hint">
+                Postcode must be a valid UK postcode.
+              </span>
 
-          </label>
-
-
-              <div class="govuk-!-padding-bottom-2"></div>
-
-            <label class="govuk-label" for="event-address">Select an address</label>
-            <select class="govuk-select govuk-!-width-one-half" id="event-address" name="event-addresst">
-              <option>5 addresses found</option>
-              <option>1 Main Street, London, W1A 1AA </option>
-              <option>2 Main Street, London, W1A 1AA </option>
-              <option>3 Main Street, London, W1A 1AA </option>
-              <option>4 Main Street, London, W1A 1AA </option>
-              <option>5 Main Street, London, W1A 1AA </option>
-            </select>
-
+            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text">
           </div>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
 
           <p>
-            <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
+            <a class="govuk-link" href="manual_address">Enter address manually</a>
           </p>
 
+        </form>
+      </div>
+    </div>
 
-
-          <div class="govuk-form-group">
-            <input class="govuk-button" type="submit" value="Continue">
-          </div>
-        </div>
-
-
-
-</form>
-
-    </div> -->
-  </div>
 {% endblock %}
 
 {% block footer %}

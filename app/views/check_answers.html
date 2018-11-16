@@ -17,7 +17,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back",
-href: "email_address"
+href: "passported"
 }) }}
 {% endblock %}
 
@@ -43,7 +43,7 @@ href: "email_address"
             Non-molestation order{{ data['...'] }}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="client_details">
+            <a href="search">
               Change <span class="govuk-visually-hidden">first name</span>
             </a>
           </dd>
@@ -90,50 +90,45 @@ href: "email_address"
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Home address
-         </dt>
-         <dd class="app-check-your-answers__answer">
-           Main Road<br/>London<br/>{{ data['address-postcode'] }}
-         </dd>
-         <dd class="app-check-your-answers__change">
-         </dd>
-       </div>
-       <div class="app-check-your-answers__contents">
-         <dt class="app-check-your-answers__question">
            National Insurance number
          </dt>
          <dd class="app-check-your-answers__answer">
            {{ data['client-national-insurance-number'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="national_insurance_number">
-             Change <span class="govuk-visually-hidden">national insurance number</span>
-           </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Email address
+           Correspondance address
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['client-email-address'] }}
+           Main Road<br/>London<br/>{{ data['address-postcode'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="email_address">
-             Change <span class="govuk-visually-hidden">email address</span>
+           <a href="postcode_finder">
+             Change <span class="govuk-visually-hidden">Correspondance address</span>
            </a>
          </dd>
        </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Give your client access to the financial assessment</h2>
+    <h2 class="govuk-heading-m">Capital assessment</h2>
 
-    <p>
-      When you click 'Submit' we will send your client a secure link to the online financial assessment.
+    <p class="govuk-body">
+      You can now complete the capital assessment. You will be required to have the following information from your client:
     </p>
 
-    <a class="govuk-button" href="confirmation_page" role="button">
-      Submit
+        <ul class="govuk-list govuk-list--bullet">
+          <li>If they own a home or have a mortage and their values.</li>
+          <li>Any national savings, premium bonds, capital bonds or stocks and shares and their values.</li>
+          <li>Anything else that can contribute towards the legal costs.</li>
+        </ul>
+
+        <div class="govuk-!-padding-top-4"></div>
+
+    <a class="govuk-button" href="property" role="button">
+      Continue
     </a>
 
   <div class="govuk-!-padding-bottom-6"></div>
