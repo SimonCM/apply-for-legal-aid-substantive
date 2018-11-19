@@ -17,7 +17,7 @@
 
   {{ govukBackLink({
   text: "Back",
-  href: "postcode_finder_2"
+  href: "postcode_select"
 }) }}
 
 {% endblock %}
@@ -29,14 +29,9 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
-          <!-- <h1 class="govuk-panel__title">
-            {{ data['client-first-name'] }} {{ data['client-last-name'] }}
-          </h1>
-          <div class="govuk-panel__body">
-            receives a qualifying benefit
-          </div> -->
+
           <h1 class="govuk-panel__body govuk-!-font-size-48">
-            {{ data['client-first-name'] }} {{ data['client-last-name'] }}</h1>
+            {{ data['firstname'] }} {{ data['lastname'] }}</h1>
 
             <h2 class="govuk-panel__title">
             receives a qualifying benefit</h2>

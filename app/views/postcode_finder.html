@@ -28,17 +28,17 @@ Apply for legal aid - Correspondence address lookup
 
         <h1 class="govuk-heading-xl">Enter a correspondence address for your client</h1>
 
-        <form action="/postcode_finder_2" method="post" novalidate>
+        <form action="/postcode_select" method="post" novalidate>
           <div class="govuk-form-group">
 
-              <label class="govuk-label" for="postcode">
-                Postcode
-              </label>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Postcode
+            </legend>
+
               <span id="postcode-hint" class="govuk-hint">
                 Postcode must be a valid UK postcode.
               </span>
 
-            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text">
+            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" value="{{ data['postcode'] }}">
           </div>
 
           <button type="submit" class="govuk-button">
