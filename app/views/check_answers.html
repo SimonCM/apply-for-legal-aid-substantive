@@ -4,21 +4,21 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-  Apply for legal aid
+Apply for legal aid - Check your answers
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-tag: {
-  text: "prototype"
-},
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
 
-{{ govukBackLink({
-text: "Back",
-href: "passported"
-}) }}
+  {{ govukBackLink({
+    text: "Back",
+      href: "/passported"
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -29,10 +29,9 @@ href: "passported"
         Check your answers
       </h1>
 
-
-      <h2 class="govuk-heading-m">
-        Scope of legal aid
-      </h2>
+        <h2 class="govuk-heading-m">
+          Scope of legal aid
+        </h2>
 
       <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
         <div class="app-check-your-answers__contents">
@@ -40,11 +39,11 @@ href: "passported"
             Proceeding
           </dt>
           <dd class="app-check-your-answers__answer">
-            Non-molestation order{{ data['...'] }}
+            Application for care order{{ data['...'] }}
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="search">
-              Change <span class="govuk-visually-hidden">first name</span>
+              Change <span class="govuk-visually-hidden">proceeding</span>
             </a>
           </dd>
         </div>
@@ -60,7 +59,7 @@ href: "passported"
            First name
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['client-first-name'] }}
+           {{ data['firstname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
            <a href="client_details">
@@ -73,7 +72,7 @@ href: "passported"
            Last name
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['client-last-name'] }}
+           {{ data['lastname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
          </dd>
@@ -83,7 +82,7 @@ href: "passported"
            Date of birth
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['client-dob-day'] }}/{{ data['client-dob-month'] }}/{{ data['client-dob-year'] }}
+           {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
          </dd>
          <dd class="app-check-your-answers__change">
          </dd>
@@ -93,7 +92,7 @@ href: "passported"
            National Insurance number
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['client-national-insurance-number'] }}
+           {{ data['national-insurance-number'] }}
          </dd>
          <dd class="app-check-your-answers__change">
          </dd>
@@ -103,7 +102,7 @@ href: "passported"
            Correspondance address
          </dt>
          <dd class="app-check-your-answers__answer">
-           Main Road<br/>London<br/>{{ data['address-postcode'] }}
+           Main Road<br/>London<br/>{{ data['postcode'] }}
          </dd>
          <dd class="app-check-your-answers__change">
            <a href="postcode_finder">
