@@ -17,7 +17,7 @@ Apply for legal aid - Check your answers
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported"
+      href: "/postcode_select"
   }) }}
 {% endblock %}
 
@@ -42,7 +42,7 @@ Apply for legal aid - Check your answers
             Application for care order{{ data['...'] }}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="search">
+            <a href="search#search">
               Change <span class="govuk-visually-hidden">proceeding</span>
             </a>
           </dd>
@@ -62,7 +62,7 @@ Apply for legal aid - Check your answers
            {{ data['firstname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details">
+           <a href="client_details#firstname">
              Change <span class="govuk-visually-hidden">first name</span>
            </a>
          </dd>
@@ -75,6 +75,9 @@ Apply for legal aid - Check your answers
            {{ data['lastname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
+           <a href="client_details#lastname">
+             Change <span class="govuk-visually-hidden">last name</span>
+           </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
@@ -85,6 +88,9 @@ Apply for legal aid - Check your answers
            {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
          </dd>
          <dd class="app-check-your-answers__change">
+           <a href="client_details#dob-day">
+             Change <span class="govuk-visually-hidden">dob</span>
+           </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
@@ -95,6 +101,9 @@ Apply for legal aid - Check your answers
            {{ data['national-insurance-number'] }}
          </dd>
          <dd class="app-check-your-answers__change">
+           <a href="client_details#national-insurance-number">
+             Change <span class="govuk-visually-hidden">national insurance number</span>
+           </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
@@ -102,35 +111,25 @@ Apply for legal aid - Check your answers
            Correspondance address
          </dt>
          <dd class="app-check-your-answers__answer">
-           Main Road<br/>London<br/>{{ data['postcode'] }}
+           Main Street<br/>London<br/>{{ data['postcode'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="postcode_finder">
-             Change <span class="govuk-visually-hidden">Correspondance address</span>
+           <a href="postcode_finder#postcode">
+             Change <span class="govuk-visually-hidden">correspondance address</span>
            </a>
          </dd>
        </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Capital assessment</h2>
+    <h2 class="govuk-heading-m">Checking your client's tax and benefits status</h2>
 
-    <p class="govuk-body">
-      You can now complete the capital assessment. You will be required to have the following information from your client:
-    </p>
+      <p class="govuk-body">
+        We will now check your clients details with the Department for Work and Pensions to see if they receive benefits that qualify for legal aid.
+      </p>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>If they own a home or have a mortage and their values.</li>
-          <li>Any national savings, premium bonds, capital bonds or stocks and shares and their values.</li>
-          <li>Anything else that can contribute towards the legal costs.</li>
-        </ul>
-
-        <div class="govuk-!-padding-top-4"></div>
-
-    <a class="govuk-button" href="property" role="button">
-      Continue
-    </a>
-
-      <div class="govuk-!-padding-bottom-6"></div>
+      <a class="govuk-button" href="dwp_check" role="button">
+        Continue
+      </a>
 
     </div>
   </div>
