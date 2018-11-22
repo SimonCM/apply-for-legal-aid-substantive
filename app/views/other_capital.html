@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Other capital
+Apply for legal aid - Other capital assets
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,25 +31,25 @@ Apply for legal aid - Other capital
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you have anything that can pay towards legal costs?
+                  Does your client have anything that can pay towards legal costs?
                 </h1>
               </legend>
                 <p class="govuk-body">
-            Select ‘Yes’ if you have any of the following.
+                For example, cash savings, ISAs, building society or Post Office accounts.
                 </p>
 
                 <div class="govuk-!-padding-bottom-4"></div>
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="merits-1" name="merits" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="merits-1">
+                  <input class="govuk-radios__input" id="othercapital-1" name="othercapital" type="radio" value="yes" {{ checked("capital","yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="othercapitaly-1">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="merits-2" name="merits" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="merits-2">
+                  <input class="govuk-radios__input" id="othercapital-2" name="othercapital" type="radio" value="no" {{ checked("capital","no") }}>
+                  <label class="govuk-label govuk-radios__label" for="othercapital-2">
                     No
                   </label>
                 </div>
