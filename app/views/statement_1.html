@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Statement of case
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "merits"
+      href: "alt_funding"
   }) }}
 {% endblock %}
 
@@ -25,54 +25,19 @@ Apply for legal aid -
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Statement</h1>
+        <h1 class="govuk-heading-xl">Statement of case</h1>
 
-        <form action="/form-handler" method="post" novalidate>
+        <form action="check_answers_merits" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--m" for="passport-number">
-              Passport number
+            <label class="govuk-label" for="more-detail">
+              <p>You will need to include what has happened so far, personal information including the parties involved, their relationship and all key dates. If previous proceedings involve the same relationship or children, please provide details of these and explain why these current proceedings are necessary.</p>
+              <p>What is the client's position, what they are seeking and why? You must provide sufficient information to satisfy the criteria set out in the merits regulations and criteria applicable to the case including the benefit likely to be obtained.</p>
             </label>
-            <span id="passport-number-hint" class="govuk-hint">
-              For example, 502135326
-            </span>
-            <input class="govuk-input" id="passport-number" name="passport-number" type="text" aria-describedby="passport-number-hint">
-          </div>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="expiry-hint" role="group">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"> Expiry date
-              </legend>
-              <span id="expiry-hint" class="govuk-hint">
-                For example, 31 3 1980
-              </span>
-              <div class="govuk-date-input" id="expiry">
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="expiry-day">
-                      Day
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="expiry-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="expiry-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+            <!-- <span id="more-detail-hint" class="govuk-hint">
+              Don’t include personal or financial information, eg your National Insurance number or credit card details.
+            </span> -->
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="15" aria-describedby="more-detail-hint"></textarea>
           </div>
 
           <button type="submit" class="govuk-button">

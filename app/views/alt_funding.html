@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Capital assets
+Apply for legal aid - Alternative funding
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid - Capital assets
 
   {{ govukBackLink({
     text: "Back",
-      href: "/property"
+      href: "prospects_of_success"
   }) }}
 {% endblock %}
 
@@ -25,41 +25,25 @@ Apply for legal aid - Capital assets
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="other_capital_alt" method="post" class="form">
+        <h1 class="govuk-heading-xl">Alternative funding</h1>
+
+        <form action="statement_1" method="post" novalidate>
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  Does your client have any savings?
-                </h1>
-              </legend>
-                <p class="govuk-body">
-                For example, cash savings, ISAs, building society or Post Office accounts.
-                </p>
+            <label class="govuk-label" for="more-detail">
+              <p>You will need to include what has happened so far.</p>
 
-                <div class="govuk-!-padding-bottom-4"></div>
-
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="capital-1" name="capital" type="radio" value="yes" {{ checked("capital","yes") }}>
-                  <label class="govuk-label govuk-radios__label" for="capitaly-1">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="capital-2" name="capital" type="radio" value="no" {{ checked("capital","no") }}>
-                  <label class="govuk-label govuk-radios__label" for="capital-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+            </label>
+            <span id="more-detail-hint" class="govuk-hint">
+              Hint text
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="1" aria-describedby="more-detail-hint"></textarea>
           </div>
 
           <button type="submit" class="govuk-button">
             Continue
           </button>
+
         </form>
       </div>
     </div>

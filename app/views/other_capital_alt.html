@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Property and mortgage
+Apply for legal aid - Other capital
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid - Property and mortgage
 
   {{ govukBackLink({
     text: "Back",
-      href: "/assessment_start"
+      href: "/capital"
   }) }}
 {% endblock %}
 
@@ -25,7 +25,7 @@ Apply for legal aid - Property and mortgage
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="capital_alt" method="post" class="form">
+        <form action="prospects_of_success" method="post" class="form">
 
 
           <div class="govuk-form-group">
@@ -87,6 +87,70 @@ Apply for legal aid - Property and mortgage
                     </label>
                     <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
                     <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="contact-by-text" name="contact-by-text" type="tel">
+                  </div>
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-4" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-4">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-4">
+                    A classic car or caravan
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-4">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Enter the estimated value of the vehicle
+                    </label>
+                    <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
+                    <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="contact-by-email" name="contact-by-email" type="email">
+                  </div>
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-5" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-5">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-5">
+                    National Savings certificates or Premium Bonds
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-5">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Enter the total value
+                    </label>
+                    <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
+                    <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="contact-by-email" name="contact-by-email" type="email">
+                  </div>
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-6" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-6">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-6">
+                    Life assurance or endowment policies not linked to a mortgage
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-6">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Enter the estimated value of the policies
+                    </label>
+                    <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
+                    <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="contact-by-email" name="contact-by-email" type="email">
+                  </div>
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="citizenship-conditional-7" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-7">
+                  <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-7">
+                    Money or assets from the estate of a person who has died
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-7">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Enter the total value
+                    </label>
+                    <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
+                    <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="contact-by-email" name="contact-by-email" type="email">
                   </div>
 
                 </div>

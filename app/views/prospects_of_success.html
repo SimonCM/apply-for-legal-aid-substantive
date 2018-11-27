@@ -17,7 +17,7 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "merits"
+      href: "other_capital_alt"
   }) }}
 {% endblock %}
 
@@ -25,7 +25,7 @@ Apply for legal aid -
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/statement_1" method="post" novalidate>
+        <form action="/alt_funding" method="post" novalidate>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -34,33 +34,36 @@ Apply for legal aid -
                   What are the prospects of success?
                 </h1>
               </legend>
+
+              <div class="govuk-!-padding-bottom-4"></div>
+
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                  <input class="govuk-radios__input" id="where-do-you-live-1" name="prospects" type="radio" value="better" {{ checked("prospects","better") }}>
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
                     50% or better
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                  <input class="govuk-radios__input" id="where-do-you-live-2" name="prospects" type="radio" value="marginal" {{ checked("prospects","marginal") }}>
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
                     Marginal 45 - 50%
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                  <input class="govuk-radios__input" id="where-do-you-live-3" name="prospects" type="radio" value="borderline" {{ checked("prospects","borderline") }}>
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
                     Borderline
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <input class="govuk-radios__input" id="where-do-you-live-4" name="prospects" type="radio" value="uncertain" {{ checked("prospects","uncertain") }}>
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
                     Uncertain
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <input class="govuk-radios__input" id="where-do-you-live-4" name="prospects" type="radio" value="poor" {{ checked("prospects","poor") }}>
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
                     Poor
                   </label>

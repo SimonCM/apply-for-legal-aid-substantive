@@ -40,7 +40,7 @@ router.get('/other_capital', function (req, res) {
     res.redirect('/yes_holding_page')
   } else {
     // If over18 is any other value (or is missing) render the page requested
-    res.render('other_capital')
+    res.render('other_capital_alt')
   }
 })
 
