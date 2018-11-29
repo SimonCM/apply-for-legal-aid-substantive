@@ -17,7 +17,7 @@ Apply for legal aid - Check your answers - Merits
 
   {{ govukBackLink({
     text: "Back",
-      href: "/prospects_of_success"
+      href: "/declaration"
   }) }}
 {% endblock %}
 
@@ -36,7 +36,7 @@ Apply for legal aid - Check your answers - Merits
       <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
-            Proceeding
+            House or mortgage
           </dt>
           <dd class="app-check-your-answers__answer">
             Application for care order{{ data['...'] }}
@@ -56,7 +56,7 @@ Apply for legal aid - Check your answers - Merits
      <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           First name
+           Statement
          </dt>
          <dd class="app-check-your-answers__answer">
            {{ data['firstname'] }}
@@ -121,14 +121,14 @@ Apply for legal aid - Check your answers - Merits
        </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Checking your client's tax and benefits status</h2>
+    <h2 class="govuk-heading-m">Complete the application</h2>
 
       <p class="govuk-body">
-        We will now check your clients details with the Department for Work and Pensions to see if they receive benefits that qualify for legal aid.
+        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
-      <a class="govuk-button" href="declaration" role="button">
-        Continue
+      <a class="govuk-button" href="dashboard_2" role="button">
+        Accept and send application
       </a>
 
     </div>
