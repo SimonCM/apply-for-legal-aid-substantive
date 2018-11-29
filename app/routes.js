@@ -33,7 +33,7 @@ router.get('/capital', function (req, res) {
   }
 })
 
-router.get('/other_capital', function (req, res) {
+router.get('/other_capital_alt', function (req, res) {
 
   if (req.session.data.capital === 'yes') {
     // Redirect to the relevant page
@@ -44,17 +44,17 @@ router.get('/other_capital', function (req, res) {
   }
 })
 
-router.get('/merits', function (req, res) {
-  // Get the answer from the query string (eg. ?over18=false)
-
-  if (req.session.data.othercapital === 'yes') {
-    // Redirect to the relevant page
-    res.redirect('/yes_holding_page')
-  } else {
-    // If over18 is any other value (or is missing) render the page requested
-    res.render('merits')
-  }
-})
+// router.get('/merits', function (req, res) {
+//   // Get the answer from the query string (eg. ?over18=false)
+//
+//   if (req.session.data.othercapital === 'yes') {
+//     // Redirect to the relevant page
+//     res.redirect('/yes_holding_page')
+//   } else {
+//     // If over18 is any other value (or is missing) render the page requested
+//     res.render('merits')
+//   }
+// })
 
 // Add your routes here - above the module.exports line
 module.exports = router

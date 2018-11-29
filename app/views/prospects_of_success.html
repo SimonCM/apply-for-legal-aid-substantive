@@ -17,7 +17,7 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "other_capital_alt"
+      href: "alt_funding"
   }) }}
 {% endblock %}
 
@@ -25,7 +25,7 @@ Apply for legal aid -
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/alt_funding" method="post" novalidate>
+        <form action="/check_answers_merits" method="post" novalidate>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -37,38 +37,68 @@ Apply for legal aid -
 
               <div class="govuk-!-padding-bottom-4"></div>
 
-              <div class="govuk-radios">
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-1" name="prospects" type="radio" value="better" {{ checked("prospects","better") }}>
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-1" name="prospects" type="radio" value="better" {{ checked("prospects","better") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
                     50% or better
                   </label>
                 </div>
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="prospects" type="radio" value="marginal" {{ checked("prospects","marginal") }}>
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-2" name="prospects" type="radio" value="marginal" data-aria-controls="conditional-how-contacted-conditional-2" {{ checked("prospects","marginal") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
                     Marginal 45 - 50%
                   </label>
                 </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-phone">
+                      Please explain why you believe legal aid should be granted
+                    </label>
+                    <textarea class="govuk-textarea" id="marginal-more-detail" name="marginal-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['marginal-more-detail'] }}</textarea>
+                  </div>
+
+                </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-3" name="prospects" type="radio" value="borderline" {{ checked("prospects","borderline") }}>
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-3" name="prospects" type="radio" value="borderline" data-aria-controls="conditional-how-contacted-conditional-3" {{ checked("prospects","borderline") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
                     Borderline
                   </label>
                 </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-text">
+                      Please explain why you believe legal aid should be granted
+                    </label>
+                    <textarea class="govuk-textarea" id="borderline-more-detail" name="borderline-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['borderline-more-detail'] }}</textarea>
+                  </div>
+
+                </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="prospects" type="radio" value="uncertain" {{ checked("prospects","uncertain") }}>
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-4" name="prospects" type="radio" value="uncertain" data-aria-controls="conditional-how-contacted-conditional-4" {{ checked("prospects","uncertain") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
                     Uncertain
                   </label>
                 </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-4">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-text">
+                      Please explain why you believe legal aid should be granted
+                    </label>
+                    <textarea class="govuk-textarea" id="uncertain-more-detail" name="uncertain-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['uncertain-more-detail'] }}</textarea>
+
+                  </div>
+
+                </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="prospects" type="radio" value="poor" {{ checked("prospects","poor") }}>
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  <input class="govuk-radios__input" id="how-contacted-conditional-5" name="prospects" type="radio" value="poor" {{ checked("prospects","poor") }}>
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-5">
                     Poor
                   </label>
                 </div>
               </div>
+
             </fieldset>
           </div>
 
