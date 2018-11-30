@@ -31,18 +31,36 @@ Apply for legal aid - Statement of case
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-              <p>You will need to include what has happened so far, personal information including the parties involved, their relationship and all key dates. If previous proceedings involve the same relationship or children, please provide details of these and explain why these current proceedings are necessary.</p>
-              <p>What is the client's position, what they are seeking and why? You must provide sufficient information to satisfy the criteria set out in the merits regulations and criteria applicable to the case including the benefit likely to be obtained.</p>
+              <p class="govuk-body-l">Please tell us about the case providing sufficient information to satisfy the regulations.<p>
+
+              <h2 class="govuk-heading-m">You must include the following details</h2>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Details of what has happened so far, the clients position, what they are seeking and why.</li>
+                <li>Previous Legal help or Family help.</li>
+                <li>Previous court proceedings and if the issue is currently before court.</li>
+                <li>Number of clients represented.</li>
+                <li>Opponents & other parties including those with an interest in the issue.</li>
+                <li>Any other persons who might benefit who can bring or fund the case.</li>
+                <li>Details of the most recent incident, if a warning letter has been sent, the police have been notified or there are any criminal charges.</li>
+              </ul>
             </label>
             <!-- <span id="more-detail-hint" class="govuk-hint">
               Don’t include personal or financial information, eg your National Insurance number or credit card details.
             </span> -->
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
             <textarea class="govuk-textarea" id="more-detail" name="statement" rows="15" aria-describedby="more-detail-hint">{{ data['statement'] }}</textarea>
           </div>
 
           <button type="submit" class="govuk-button">
             Continue
           </button>
+
+          <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
+            Save as draft
+          </a>
 
         </form>
       </div>

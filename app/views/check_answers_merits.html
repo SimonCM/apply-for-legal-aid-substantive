@@ -26,7 +26,7 @@ Apply for legal aid - Check your answers - Merits
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Check your answers - Merits
+        Check your answers
       </h1>
 
         <h2 class="govuk-heading-m">
@@ -39,11 +39,37 @@ Apply for legal aid - Check your answers - Merits
             House or mortgage
           </dt>
           <dd class="app-check-your-answers__answer">
-            Application for care order{{ data['...'] }}
+            No{{ data['...'] }}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="search#search">
-              Change <span class="govuk-visually-hidden">proceeding</span>
+            <a href="#">
+              Change <span class="govuk-visually-hidden">blank</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Savings, bonds, stocks and shares
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            No{{ data['...'] }}
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              Change <span class="govuk-visually-hidden">blank</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Anything that can contribute to the legal costs
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            No{{ data['...'] }}
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="#">
+              Change <span class="govuk-visually-hidden">blank</span>
             </a>
           </dd>
         </div>
@@ -56,66 +82,66 @@ Apply for legal aid - Check your answers - Merits
      <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Statement
+           Statement of case
          </dt>
          <dd class="app-check-your-answers__answer">
            {{ data['firstname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details#firstname">
-             Change <span class="govuk-visually-hidden">first name</span>
+           <a href="#">
+             Change <span class="govuk-visually-hidden">blank</span>
            </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Last name
+           Attempts to settle
          </dt>
          <dd class="app-check-your-answers__answer">
            {{ data['lastname'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details#lastname">
-             Change <span class="govuk-visually-hidden">last name</span>
+           <a href="#">
+             Change <span class="govuk-visually-hidden">blank</span>
            </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Date of birth
+           Costs
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
+           {{ data['dob-day'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details#dob-day">
-             Change <span class="govuk-visually-hidden">dob</span>
+           <a href="#">
+             Change <span class="govuk-visually-hidden">blank</span>
            </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           National Insurance number
+           Prospects of success
          </dt>
          <dd class="app-check-your-answers__answer">
            {{ data['national-insurance-number'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details#national-insurance-number">
-             Change <span class="govuk-visually-hidden">national insurance number</span>
+           <a href="#">
+             Change <span class="govuk-visually-hidden">blank</span>
            </a>
          </dd>
        </div>
        <div class="app-check-your-answers__contents">
          <dt class="app-check-your-answers__question">
-           Correspondance address
+           Declaration
          </dt>
          <dd class="app-check-your-answers__answer">
-           Main Street<br/>London<br/>{{ data['postcode'] }}
+           Yes {{ data['...'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="postcode_finder#postcode">
-             Change <span class="govuk-visually-hidden">correspondance address</span>
+           <a href="#">
+             Change <span class="govuk-visually-hidden">blank</span>
            </a>
          </dd>
        </div>
@@ -124,7 +150,7 @@ Apply for legal aid - Check your answers - Merits
     <h2 class="govuk-heading-m">Complete the application</h2>
 
       <p class="govuk-body">
-        By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
       <a class="govuk-button" href="dashboard_2" role="button">
