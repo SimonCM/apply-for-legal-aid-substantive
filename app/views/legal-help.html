@@ -17,7 +17,7 @@ Apply for legal aid - Alternative funding
 
   {{ govukBackLink({
     text: "Back",
-      href: "statement_1"
+      href: "other_capital_alt"
   }) }}
 {% endblock %}
 
@@ -25,14 +25,14 @@ Apply for legal aid - Alternative funding
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="costs" method="post" class="form">
+        <form action="statement_1" method="post" class="form">
 
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Have any attempts been made to settle the matter?
+        Has your client received legal help for the matter?
       </h1>
     </legend>
     <span id="how-contacted-conditional-hint" class="govuk-hint">
@@ -48,21 +48,22 @@ Apply for legal aid - Alternative funding
           Yes
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-email">
-            Please give details of any proposals to settle and any response to those proposals?
-          </label>
-          <textarea class="govuk-textarea" id="yes-more-detail" name="yes-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['yes-more-detail'] }}</textarea>
-        </div>
-
-      </div>
 
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="how-contacted-conditional-2" name="attempts-to-settle" type="radio" value="no" data-aria-controls="conditional-how-contacted-conditional-2" {{ checked("attempts-to-settle","no") }}>
         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
           No
         </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Please give details of why your client is applying for legal aid.
+          </label>
+          <textarea class="govuk-textarea" id="no-more-detail" name="no-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['no-more-detail'] }}</textarea>
+        </div>
+
+      </div>
         </fieldset>
       </div>
 

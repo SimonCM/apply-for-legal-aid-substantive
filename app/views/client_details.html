@@ -17,7 +17,7 @@ Apply for legal aid - Client details
 
   {{ govukBackLink({
     text: "Back",
-      href: "/search"
+      href: "/delegated_functions"
   }) }}
 {% endblock %}
 
@@ -38,14 +38,14 @@ Apply for legal aid - Client details
                 <label class="govuk-label" for="firstname">
                 First name
                 </label>
-              <input class="govuk-input govuk-!-width-one-half" id="firstname" name="firstname" type="text" value="{{ data['firstname'] }}">
+              <input class="govuk-input govuk-!-width-three-quarters" id="firstname" name="firstname" type="text" value="{{ data['firstname'] }}">
             </div>
 
             <div class="govuk-form-group">
                 <label class="govuk-label" for="lastname">
                 Last name
                 </label>
-              <input class="govuk-input govuk-!-width-one-half" id="lastname" name="lastname" type="text" value="{{ data['lastname'] }}">
+              <input class="govuk-input govuk-!-width-three-quarters" id="lastname" name="lastname" type="text" value="{{ data['lastname'] }}">
             </div>
 
           </fieldset>
@@ -101,21 +101,52 @@ Apply for legal aid - Client details
             <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint" value="{{ data['national-insurance-number'] }}">
           </div>
 
-           <details class="govuk-details">
-             <summary class="govuk-details__summary">
-               <span class="govuk-details__summary-text">
-                 I don't have my client's National Insurance number
-               </span>
-             </summary>
-             <div class="govuk-details__text">
-               Space for copy on process if solicitor does not have their clients National Insurace number.
-             </div>
-           </details>
+           <div class="govuk-!-padding-bottom-2"></div>
 
+           <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="email-address">
+              Email address
+            </label>
+            <span id="email-hint" class="govuk-hint">
+              We’ll only use this to send your client a secure link
+            </span>
+            <input class="govuk-input govuk-!-width-three-quarters" id="email-address" name="email-address" type="email" aria-describedby="email-hint" value="{{ data['email-address'] }}">
+          </div>
+
+          <!-- <div class="govuk-!-padding-bottom-2"></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="email">
+              Client respresentation
+            </label>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                    Application completed by a person acting in a professional capacity.
+                </label>
+              </div>
+          </div> -->
+
+          <div class="govuk-!-padding-bottom-4"></div>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                I don't have my client's details
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Space for copy on process if solicitor does not have their clients National Insurace number.
+            </div>
+          </details>
 
           <button type="submit" class="govuk-button">
             Continue
           </button>
+
+          <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
+            Save as draft
+          </a>
 
         </form>
 

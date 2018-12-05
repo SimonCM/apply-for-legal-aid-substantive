@@ -17,7 +17,7 @@ Apply for legal aid - Statement of case
 
   {{ govukBackLink({
     text: "Back",
-      href: "other_capital_alt"
+      href: "legal-help"
   }) }}
 {% endblock %}
 
@@ -27,7 +27,7 @@ Apply for legal aid - Statement of case
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Statement of case</h1>
 
-        <form action="attempts_settle" method="post" novalidate>
+        <form action="costs" method="post" novalidate>
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
@@ -36,11 +36,13 @@ Apply for legal aid - Statement of case
               <h2 class="govuk-heading-m">You must include the following details</h2>
 
               <ul class="govuk-list govuk-list--bullet">
-                <li>Details of what has happened so far, the clients position, what they are seeking and why.</li>
                 <!-- <li>Previous Legal help or Family help.</li>
                 <li>Previous court proceedings and if the issue is currently before court.</li> -->
-                <li>Number of clients represented.</li>
                 <!-- <li>Opponents & other parties including those with an interest in the issue.</li> -->
+                <li>What has happened so far.</li>
+                <li>Parties involved and their relationship to the applicant.</li>
+                <li>Explain why the current proceedings are neccessary.</li>
+                <li>Number of clients represented.</li>
                 <li>Any other persons who might benefit who can bring or fund the case.</li>
                 <li>Domestic abuse unique - Details of the most recent incident, if a warning letter has been sent, the police have been notified or there are any criminal charges.</li>
               </ul>

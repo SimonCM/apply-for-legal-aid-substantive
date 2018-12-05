@@ -39,11 +39,24 @@ Apply for legal aid - Check your answers
             Proceeding
           </dt>
           <dd class="app-check-your-answers__answer">
-            Application for care order{{ data['...'] }}
+            Non-molestation order{{ data['...'] }}
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="search#search">
               Change <span class="govuk-visually-hidden">proceeding</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Delegated functions date
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            01/12/2018{{ data['...'] }}
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="client_details#national-insurance-number">
+              Change <span class="govuk-visually-hidden">delegated functions date</span>
             </a>
           </dd>
         </div>
@@ -111,11 +124,24 @@ Apply for legal aid - Check your answers
            Correspondance address
          </dt>
          <dd class="app-check-your-answers__answer">
-           Main Street<br/>London<br/>{{ data['postcode'] }}
+           1 Main Street<br/>London<br/>{{ data['postcode'] }}
          </dd>
          <dd class="app-check-your-answers__change">
            <a href="postcode_finder#postcode">
              Change <span class="govuk-visually-hidden">correspondance address</span>
+           </a>
+         </dd>
+       </div>
+       <div class="app-check-your-answers__contents">
+         <dt class="app-check-your-answers__question">
+           Email address
+         </dt>
+         <dd class="app-check-your-answers__answer">
+           {{ data['email-address'] }}
+         </dd>
+         <dd class="app-check-your-answers__change">
+           <a href="client_details#national-insurance-number">
+             Change <span class="govuk-visually-hidden">email address</span>
            </a>
          </dd>
        </div>
@@ -129,6 +155,10 @@ Apply for legal aid - Check your answers
 
       <a class="govuk-button" href="dwp_check" role="button">
         Continue
+      </a>
+
+      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
+        Save as draft
       </a>
 
     </div>
