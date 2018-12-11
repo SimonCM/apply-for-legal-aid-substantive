@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Confirmation page
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,44 +16,49 @@ Apply for legal aid -
   }) }}
 
   {{ govukBackLink({
-    text: "Back",
-      href: "statement_1"
-  }) }}
+  text: "Back",
+  href: "/passported_v2/check_answers"
+}) }}
+
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+          <h1 class="govuk-panel__body govuk-!-font-size-48">
+            {{ data['firstname'] }} {{ data['lastname'] }}</h1>
 
-    <form action="/prospects_of_success" method="post" novalidate>
-      <div class="govuk-form-group">
+            <div class="govuk-panel__title">
+            receives a qualifying benefit</div>
+        </div>
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
+        <div class="govuk-!-padding-top-4"></div>
 
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
+          <h3 class="govuk-heading-m">Your client's benefits status</h3>
 
+          <p class="govuk-body">Your client receives benefits that qualify for legal aid.</p>
 
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
-      </div>
+          <h3 class="govuk-heading-m">What happens next</h3>
 
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
+          <p class="govuk-body">
+            You now need to complete a capital and merits assessment for your client.
+          </p>
 
-      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-        Save as draft
-      </a>
+        <a href="assessment_start" role="button" class="govuk-button right">
+          Continue to assessment
+        </a>
 
-    </form>
+        <a role="button" class="govuk-button draft-button">
+          Save as draft
+        </a>
+
+    </div>
   </div>
-</div>
+
+
 
 {% endblock %}
 

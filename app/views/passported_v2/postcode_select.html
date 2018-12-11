@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Correspondence address select
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "statement_1"
+      href: "/passported_v2/postcode_finder"
   }) }}
 {% endblock %}
 
@@ -25,22 +25,39 @@ Apply for legal aid -
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Enter a correspondence address for your client</h1>
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+    <form action="check_answers" method="post" novalidate>
 
-    <form action="/prospects_of_success" method="post" novalidate>
       <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"> Postcode
+          </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold postcode_change" for="change-postcode">{{ data['postcode'] }}</label>
+              <p class="postcode_change"><a class="govuk-link" href="postcode_finder" aria-label="change postcode">Change</a></p>
+            </div>
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="address-select">
+              Select an address
+              </label>
+              <select class="govuk-select govuk-!-width-three-quarters" id="address-select" name="address-select">
+                <option>5 addresses found</option>
+                <option>1 Main Street, London, {{ data['postcode'] }} </option>
+                <option>2 Main Street, London, {{ data['postcode'] }} </option>
+                <option>3 Main Street, London, {{ data['postcode'] }} </option>
+                <option>4 Main Street, London, {{ data['postcode'] }} </option>
+                <option>5 Main Street, London, {{ data['postcode'] }} </option>
+              </select>
+          </div>
 
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
-
-
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
+          <div class="govuk-form-group">
+            <p>
+              <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
+            </p>
+          </div>
+        </fieldset>
       </div>
 
       <button type="submit" class="govuk-button">

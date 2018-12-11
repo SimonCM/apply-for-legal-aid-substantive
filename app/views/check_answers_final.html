@@ -16,8 +16,8 @@ Apply for legal aid - Check your answers - Merits
   }) }}
 
   {{ govukBackLink({
-    text: "Back",
-      href: "/declaration"
+    text: "Home",
+      href: "/dashboard_2"
   }) }}
 {% endblock %}
 
@@ -26,8 +26,114 @@ Apply for legal aid - Check your answers - Merits
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Check your answers
+        {{ data['firstname'] }} {{ data['lastname'] }}
+          <span class="govuk-heading-m">2018/LAA/4ewrgfdd </span>
       </h1>
+
+      <h2 class="govuk-heading-m">
+        Scope of legal aid
+      </h2>
+
+    <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Proceeding
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Non-molestation order{{ data['...'] }}
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="search#search">
+            Change <span class="govuk-visually-hidden">proceeding</span>
+          </a>
+        </dd>
+      </div>
+   </dl>
+
+   <h2 class="govuk-heading-m">
+     Client details
+   </h2>
+
+   <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         First name
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         {{ data['firstname'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="client_details#firstname">
+           Change <span class="govuk-visually-hidden">first name</span>
+         </a>
+       </dd>
+     </div>
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         Last name
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         {{ data['lastname'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="client_details#lastname">
+           Change <span class="govuk-visually-hidden">last name</span>
+         </a>
+       </dd>
+     </div>
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         Date of birth
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="client_details#dob-day">
+           Change <span class="govuk-visually-hidden">dob</span>
+         </a>
+       </dd>
+     </div>
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         National Insurance number
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         {{ data['national-insurance-number'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="client_details#national-insurance-number">
+           Change <span class="govuk-visually-hidden">national insurance number</span>
+         </a>
+       </dd>
+     </div>
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         Email address
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         {{ data['email-address'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="client_details#email-address">
+           Change <span class="govuk-visually-hidden">email address</span>
+         </a>
+       </dd>
+     </div>
+     <div class="app-check-your-answers__contents">
+       <dt class="app-check-your-answers__question">
+         Correspondance address
+       </dt>
+       <dd class="app-check-your-answers__answer">
+         1 Main Street<br/>London<br/>{{ data['postcode'] }}
+       </dd>
+       <dd class="app-check-your-answers__change">
+         <a href="postcode_finder#postcode">
+           Change <span class="govuk-visually-hidden">correspondance address</span>
+         </a>
+       </dd>
+     </div>
+  </dl>
 
         <h2 class="govuk-heading-m">
           Capital assessment
@@ -162,7 +268,7 @@ Apply for legal aid - Check your answers - Merits
       </p>
 
       <a class="govuk-button" href="dashboard_2" role="button">
-        Accept and send application
+        Back to applications
       </a>
 
     </div>

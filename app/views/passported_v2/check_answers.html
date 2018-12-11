@@ -17,7 +17,7 @@ Apply for legal aid - Check your answers
 
   {{ govukBackLink({
     text: "Back",
-      href: "/postcode_select"
+      href: "/passported_v2/postcode_select"
   }) }}
 {% endblock %}
 
@@ -28,26 +28,6 @@ Apply for legal aid - Check your answers
       <h1 class="govuk-heading-xl">
         Check your answers
       </h1>
-
-        <h2 class="govuk-heading-m">
-          Scope of legal aid
-        </h2>
-
-      <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Proceeding
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            Non-molestation order{{ data['...'] }}
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="search#search">
-              Change <span class="govuk-visually-hidden">proceeding</span>
-            </a>
-          </dd>
-        </div>
-     </dl>
 
      <h2 class="govuk-heading-m">
        Client details
@@ -114,7 +94,7 @@ Apply for legal aid - Check your answers
            {{ data['email-address'] }}
          </dd>
          <dd class="app-check-your-answers__change">
-           <a href="client_details#email-address">
+           <a href="client_details#national-insurance-number">
              Change <span class="govuk-visually-hidden">email address</span>
            </a>
          </dd>

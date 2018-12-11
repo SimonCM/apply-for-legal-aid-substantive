@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Correspondence address lookup
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,43 +17,41 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "statement_1"
+      href: "/passported_v2/client_details"
   }) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+        <h1 class="govuk-heading-xl">Enter a correspondence address for your client</h1>
 
-    <form action="/prospects_of_success" method="post" novalidate>
-      <div class="govuk-form-group">
+        <form action="postcode_select" method="post" novalidate>
+          <div class="govuk-form-group">
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Postcode
+            </legend>
 
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
+              <span id="postcode-hint" class="govuk-hint">
+                Postcode must be a valid UK postcode.
+              </span>
 
+            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" value="{{ data['postcode'] }}">
+          </div>
 
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
+          <button type="submit" class="govuk-button">
+            Find address
+          </button>
+
+          <p>
+            <a class="govuk-link" href="/passported_v2/manual_address">Enter address manually</a>
+          </p>
+
+        </form>
       </div>
-
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-
-      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-        Save as draft
-      </a>
-
-    </form>
-  </div>
-</div>
+    </div>
 
 {% endblock %}
 

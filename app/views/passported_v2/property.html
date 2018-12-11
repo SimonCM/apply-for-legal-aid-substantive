@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Statement of case
+Apply for legal aid - Property and mortgage
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid - Statement of case
 
   {{ govukBackLink({
     text: "Back",
-      href: "legal-help"
+      href: "/passported_v2/applicant_type"
   }) }}
 {% endblock %}
 
@@ -25,36 +25,35 @@ Apply for legal aid - Statement of case
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Statement of case</h1>
-
-        <form action="costs" method="post" novalidate>
+        <form action="capital" method="post" class="form">
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="more-detail">
-              <p class="govuk-body-l">Please tell us about the case providing sufficient information to satisfy the regulations.<p>
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Does your client own their home, either outright or with a mortgage?
+                </h1>
+              </legend>
 
-              <h2 class="govuk-heading-m">You must include the following details</h2>
+                <div class="govuk-!-padding-bottom-4"></div>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <!-- <li>Previous Legal help or Family help.</li>
-                <li>Previous court proceedings and if the issue is currently before court.</li> -->
-                <!-- <li>Opponents & other parties including those with an interest in the issue.</li> -->
-                <li>What has happened so far.</li>
-                <li>Parties involved and their relationship to the applicant.</li>
-                <li>Explain why the current proceedings are neccessary.</li>
-                <li>Number of clients represented.</li>
-                <li>Any other persons who might benefit who can bring or fund the case.</li>
-            </label>
-            <!-- <span id="more-detail-hint" class="govuk-hint">
-              Don’t include personal or financial information, eg your National Insurance number or credit card details.
-            </span> -->
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="property-1" name="property" type="radio" value="yes" {{ checked("property","yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="capital-1">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="property-2" name="property" type="radio" value="no" {{ checked("property","no") }}>
+                  <label class="govuk-label govuk-radios__label" for="property-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-            <div class="govuk-!-padding-bottom-4"></div>
 
-            <div class="govuk-form-group">
-            <textarea class="govuk-textarea" id="more-detail" name="statement" rows="15" aria-describedby="more-detail-hint">{{ data['statement'] }}</textarea>
-
-            </div>
           <button type="submit" class="govuk-button">
             Continue
           </button>
@@ -62,7 +61,6 @@ Apply for legal aid - Statement of case
           <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
             Save as draft
           </a>
-
         </form>
       </div>
     </div>

@@ -18,6 +18,14 @@ router.get('/search', function (req, res) {
 
 })
 
+router.get('/passported_v2/search', function (req, res) {
+
+  res.render('passported_v2/search',
+    {
+      proceedings: utils.getProceedings()
+    })
+
+})
 
 
 // Branching

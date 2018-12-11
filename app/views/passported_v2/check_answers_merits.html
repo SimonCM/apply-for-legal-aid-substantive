@@ -17,7 +17,7 @@ Apply for legal aid - Check your answers - Merits
 
   {{ govukBackLink({
     text: "Back",
-      href: "/declaration"
+      href: "/passported_v2/declaration"
   }) }}
 {% endblock %}
 
@@ -28,6 +28,26 @@ Apply for legal aid - Check your answers - Merits
       <h1 class="govuk-heading-xl">
         Check your answers
       </h1>
+
+      <h2 class="govuk-heading-m">
+        Scope of legal aid
+      </h2>
+
+    <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Proceeding
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Non-molestation order{{ data['...'] }}
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="search#search">
+            Change <span class="govuk-visually-hidden">proceeding</span>
+          </a>
+        </dd>
+      </div>
+   </dl>
 
         <h2 class="govuk-heading-m">
           Capital assessment
@@ -161,7 +181,7 @@ Apply for legal aid - Check your answers - Merits
         By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
-      <a class="govuk-button" href="dashboard_2" role="button">
+      <a class="govuk-button" href="/passported_v2/dashboard_2" role="button">
         Accept and send application
       </a>
 
@@ -206,13 +226,3 @@ Apply for legal aid - Check your answers - Merits
     }
   }) }}
   {% endblock %}
-
-  <div class="form-section">
-    <h3 class="heading-medium">
-    Miscellaneous fees
-    <a class="link-change" href="/advocates/claims/69/edit?referrer=summary&amp;step=miscellaneous_fees">Change</a>
-    </h3>
-      <p>
-      There are no miscellaneous fees for this claim
-      </p>
-  </div>

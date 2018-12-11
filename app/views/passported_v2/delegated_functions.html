@@ -17,7 +17,7 @@ Apply for legal aid - Alternative funding
 
   {{ govukBackLink({
     text: "Back",
-      href: "search"
+      href: "/passported_v2/search"
   }) }}
 {% endblock %}
 
@@ -25,7 +25,7 @@ Apply for legal aid - Alternative funding
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="client_details" method="post" class="form">
+        <form action="applicant_type" method="post" class="form">
 
 
         <div class="govuk-form-group">
@@ -35,9 +35,12 @@ Apply for legal aid - Alternative funding
         Have you exercised delegated functions for this application?
       </h1>
     </legend>
-    <!-- <span id="how-contacted-conditional-hint" class="govuk-hint">
-      Select one option
-    </span> -->
+    <!-- <p class="govuk-body">
+    If yes the date must be within 5 days of submission.
+    </p> -->
+    <span id="how-contacted-conditional-hint" class="govuk-hint">
+      If yes the date must be within 5 days of submission.
+    </span>
 
     <div class="govuk-!-padding-bottom-4"></div>
 
