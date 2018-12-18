@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Profile
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,14 +16,40 @@ Apply for legal aid -
   }) }}
 
   {{ govukBackLink({
-    text: "Back",
-      href: "#"
+    text: "Home",
+      href: "dashboard"
   }) }}
 {% endblock %}
 
 {% block content %}
 
-Insert html here
+<h1 class="govuk-heading-xl">Your profile</h1>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Your profile</caption>
+  <thead class="govuk-table__head">
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Name</td>
+      <td class="govuk-table__cell">John Doe</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Email address</td>
+      <td class="govuk-table__cell">John.Doe@solicitors.com</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Role</td>
+      <td class="govuk-table__cell">Admin</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Account number</td>
+      <td class="govuk-table__cell">1A234B:3D456G:2S345T</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 {% endblock %}
 
