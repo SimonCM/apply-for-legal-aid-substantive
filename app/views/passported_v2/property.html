@@ -31,7 +31,7 @@ Apply for legal aid - Property and mortgage
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Does your client own their home, either outright or with a mortgage?
+                  Does your client own the home they live in?
                 </h1>
               </legend>
 
@@ -41,7 +41,13 @@ Apply for legal aid - Property and mortgage
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="property-1" name="property" type="radio" value="yes" {{ checked("property","yes") }}>
                   <label class="govuk-label govuk-radios__label" for="capital-1">
-                    Yes
+                    Yes, with a mortgage or loan
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="property-1" name="property" type="radio" value="yes" {{ checked("property","yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="capital-1">
+                    Yes, owned outright
                   </label>
                 </div>
                 <div class="govuk-radios__item">
