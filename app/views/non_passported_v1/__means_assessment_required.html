@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Costs
+  Apply for legal aid
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,43 +16,47 @@ Apply for legal aid - Costs
   }) }}
 
   {{ govukBackLink({
-    text: "Back",
-      href: "/passported_v2/statement_1"
-  }) }}
+  text: "Back",
+  href: "postcode_finder"
+}) }}
+
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h2 class="govuk-panel__title">
+            {{ data['client-first-name'] }} {{ data['client-last-name'] }} <br>must complete a financial assessment
+          </h2>
+        </div>
 
-    <form action="/passported_v2/prospects_of_success" method="post" novalidate>
-      <div class="govuk-form-group">
+<div class="govuk-!-padding-top-4"></div>
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
+        <h3 class="govuk-heading-m">Your client's tax and benefits status</h3>
 
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
+        <p class="govuk-body">Your client does not receive benefits that qualify for legal aid.</p>
+
+        <p class="govuk-body">Your client's gross income is less than £2,657.00 a month</p>
+
+        <h3 class="govuk-heading-m">What happens next</h3>
+
+        <p class="govuk-body">
+          Your client will have to complete a financial means assessment. They can complete the financial assessment online from home or another location.
+        </p>
 
 
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
-      </div>
 
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
+<a href="online_banking_radios" role="button" class="govuk-button">
+  Continue
+</a>
 
-      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-        Save as draft
-      </a>
-
-    </form>
+    </div>
   </div>
+
 </div>
 
 {% endblock %}

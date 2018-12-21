@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Costs
+Apply for legal aid - Profile
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,44 +16,40 @@ Apply for legal aid - Costs
   }) }}
 
   {{ govukBackLink({
-    text: "Back",
-      href: "/passported_v2/statement_1"
+    text: "Home",
+      href: "dashboard"
   }) }}
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Your profile</h1>
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Your profile</caption>
+  <thead class="govuk-table__head">
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Name</td>
+      <td class="govuk-table__cell">John Doe</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Email address</td>
+      <td class="govuk-table__cell">John.Doe@solicitors.com</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Role</td>
+      <td class="govuk-table__cell">Admin</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" scope="row">Account number</td>
+      <td class="govuk-table__cell">1A234B:3D456G:2S345T</td>
+    </tr>
+  </tbody>
+</table>
 
-    <form action="/passported_v2/prospects_of_success" method="post" novalidate>
-      <div class="govuk-form-group">
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
-
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
-
-
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
-      </div>
-
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-
-      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-        Save as draft
-      </a>
-
-    </form>
-  </div>
-</div>
 
 {% endblock %}
 

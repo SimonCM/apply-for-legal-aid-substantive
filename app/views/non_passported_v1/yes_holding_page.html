@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Costs
+Apply for legal aid - Yes page
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,45 +15,34 @@ Apply for legal aid - Costs
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 
-  {{ govukBackLink({
+  <!-- {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/statement_1"
-  }) }}
+      href: "#"
+  }) }} -->
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
-
-    <form action="/passported_v2/prospects_of_success" method="post" novalidate>
-      <div class="govuk-form-group">
-
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
-        </legend>
-
-          <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
-          </span>
+      <div class="govuk-grid-column-two-thirds">
 
 
-        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
-        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Yes - Holding page.
+                </h1>
+              </legend>
+
+
+            </fieldset>
+          </div>
+
+
+
       </div>
-
-      <button type="submit" class="govuk-button">
-        Continue
-      </button>
-
-      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-        Save as draft
-      </a>
-
-    </form>
-  </div>
-</div>
+    </div>
 
 {% endblock %}
 

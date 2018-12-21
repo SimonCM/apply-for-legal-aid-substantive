@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Costs
+Apply for legal aid - Property value
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid - Costs
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/statement_1"
+      href: "#"
   }) }}
 {% endblock %}
 
@@ -26,16 +26,17 @@ Apply for legal aid - Costs
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">What are the estimated legal costs of doing the work?</h1>
+    <h1 class="govuk-heading-xl">What is the outstanding mortgage on your client's home?</h1>
 
     <form action="/passported_v2/prospects_of_success" method="post" novalidate>
       <div class="govuk-form-group">
 
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Costs
+        <legend class="govuk-fieldset__legend govuk-body" for="postcode"> Enter the estimated value of your client's home
+
         </legend>
 
           <span id="postcode-hint" class="govuk-hint">
-            Please include profit costs, disbursements, expert costs and cousel fees
+            You can use property websites to find the estimated value
           </span>
 
 
