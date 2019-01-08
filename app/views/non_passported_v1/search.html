@@ -29,7 +29,7 @@ $('#search').hideseek({
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/postcode_select"
+      href: "postcode_select"
   }) }}
 {% endblock %}
 
@@ -55,7 +55,7 @@ $('#search').hideseek({
           <input class="govuk-input" id="search" name="search" type="text" data-list="#proceedings-list">
         </div>
         <div class="govuk-grid-column-one-third clear-search">
-          <p><a class="govuk-link" href="/search">Clear search</a></p>
+          <p><a class="govuk-link" href="search">Clear search</a></p>
         </div>
       </div>
 
@@ -75,7 +75,7 @@ $('#search').hideseek({
             </div>
 
             <div class="govuk-grid-column-one-third" style="text-align:right; padding-top: 25px;">
-                <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="delegated_functions">
+                <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="applicant_type">
                     Select and continue
                 </a>
             </div>

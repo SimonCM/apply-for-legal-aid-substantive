@@ -27,6 +27,15 @@ router.get('/passported_v2/search', function (req, res) {
 
 })
 
+router.get('/non_passported_v1/search', function (req, res) {
+
+  res.render('non_passported_v1/search',
+    {
+      proceedings: utils.getProceedings()
+    })
+
+})
+
 
 // Branching
 router.get('/capital', function (req, res) {
