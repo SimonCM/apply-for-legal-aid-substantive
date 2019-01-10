@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Prospects of success
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid -
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/costs"
+      href: "costs"
   }) }}
 {% endblock %}
 
@@ -25,7 +25,7 @@ Apply for legal aid -
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="/passported_v2/declaration" method="post" novalidate>
+        <form action="declaration" method="post" novalidate>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -92,12 +92,22 @@ Apply for legal aid -
 
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="how-contacted-conditional-5" name="prospects" type="radio" value="poor" {{ checked("prospects","poor") }}>
+                  <input class="govuk-radios__input" id="how-contacted-conditional-5" name="prospects" type="radio" value="poor" data-aria-controls="conditional-how-contacted-conditional-5" {{ checked("prospects","poor") }}>
                   <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-5">
                     Poor
                   </label>
                 </div>
-              </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-5">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-phone">
+                      Please explain why you believe legal aid should be granted
+                    </label>
+                    <textarea class="govuk-textarea" id="marginal-more-detail" name="marginal-more-detail" rows="5" aria-describedby="more-detail-hint">{{ data['marginal-more-detail'] }}</textarea>
+                  </div>
+
+                </div>
+
+                </div>
 
             </fieldset>
           </div>
@@ -122,14 +132,6 @@ Apply for legal aid -
           items: [
             {
               href: "#",
-              text: "Help"
-            },
-            {
-              href: "https://www.gov.uk/help/cookies",
-              text: "Cookies"
-            },
-            {
-              href: "#",
               text: "Contact"
             },
             {
@@ -137,7 +139,11 @@ Apply for legal aid -
               text: "Feedback"
             },
             {
-              href: "#",
+              href: "https://www.gov.uk/help/cookies",
+              text: "Cookies"
+            },
+            {
+              href: "https://www.gov.uk/government/publications/laa-online-portal-help-and-information",
               text: "Terms and conditions"
             },
             {
