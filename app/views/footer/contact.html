@@ -4,7 +4,18 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid -
+Apply for legal aid - Contact
+{% endblock %}
+
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Apply for legal aid",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,7 +23,7 @@ Apply for legal aid -
     tag: {
       text: "prototype"
     },
-    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    html: 'This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.'
   }) }}
 
   {{ govukBackLink({
@@ -23,7 +34,21 @@ Apply for legal aid -
 
 {% block content %}
 
-Insert html here
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Contact us</h1>
+
+          <p>For any queries about your application, contact the following:
+          <br><br>
+              Case enquires (Monday to Friday, 09:00 - 17:00) <br>
+                    Phone: <a href="tel:0300 200 2020">0300 200 2020</a>
+            <br><br>
+                Technical support (Monday to Friday, 09:00 - 17:00) <br>
+                   Email: <a href="mailto:online-support@justice.gov.uk">online-support@justice.gov.uk</a> <br>
+                      Phone: <a href="tel:0300 200 2020">0300 200 2020</a>
+
+            </div>
+            </div>
 
 {% endblock %}
 
@@ -32,11 +57,11 @@ Insert html here
       meta: {
           items: [
             {
-              href: "#",
+              href: "contact",
               text: "Contact"
             },
             {
-              href: "#",
+              href: "feedback",
               text: "Feedback"
             },
             {
