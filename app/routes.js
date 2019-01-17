@@ -36,6 +36,15 @@ router.get('/non_passported_v1/search', function (req, res) {
 
 })
 
+router.get('/proceeding_flow/search', function (req, res) {
+
+  res.render('proceeding_flow/search',
+    {
+      proceedings: utils.getProceedings()
+    })
+
+})
+
 
 // Branching
 router.get('/capital', function (req, res) {
