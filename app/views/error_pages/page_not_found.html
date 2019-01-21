@@ -2,7 +2,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Page not found
+You cannot view this page – Apply for legal aid – GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -20,16 +20,23 @@ Apply for legal aid - Page not found
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Page not found</h1>
+        <h1 class="govuk-heading-xl">You cannot view this page</h1>
         <p class="govuk-body">
-          If you typed the web address, check it is correct.
-        </p>
+          You can only view this application if you:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>are signed in</li>
+          <li>started the application</li>
+        </ul>
+
+      <!--  <p class="govuk-body">
+          To view this application you must:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>be signed in</li>
+          <li>have started the application</li>
+        </ul> -->
+
         <p class="govuk-body">
-          If you pasted the web address, check you copied the entire address.
-        </p>
-        <p class="govuk-body">
-          If the web address is correct or you selected a link or button,
-          <a href="#" class="govuk-link">contact the Tax Credits Helpline</a> if you need to speak to someone about your tax credits.
+          <a href="/sign_in">Sign in</a>
         </p>
       </div>
     </div>
