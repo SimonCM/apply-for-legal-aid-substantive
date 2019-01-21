@@ -26,10 +26,11 @@ Apply for legal aid - Feedback
     html: 'This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.'
   }) }}
 
-  {{ govukBackLink({
+<!--  {{ govukBackLink({
     text: "Back",
       href: "#"
-  }) }}
+  }) }} -->
+  <br>
 {% endblock %}
 
 {% block content %}
@@ -42,12 +43,12 @@ Apply for legal aid - Feedback
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Thank you
+                  Thank you for your feedback
                 </h1>
               </legend>
               <div class="govuk-!-padding-bottom-6"></div>
               <span id="citizenship-conditional-hint" class="govuk-body">
-                We've received your feedback.
+                <a href="#">Back to  your application</a>
               </span>
               <div class="govuk-!-padding-bottom-8"></div>
 
