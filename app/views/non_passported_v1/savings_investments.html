@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Other capital
+Apply for legal aid - Savings and investments
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Apply for legal aid - Other capital
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/property"
+      href: "property"
   }) }}
 {% endblock %}
 
@@ -31,12 +31,56 @@ Apply for legal aid - Other capital
             <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Does your client have any savings and investments?
+                  Do you have any savings and investments?
                 </h1>
               </legend>
-              <!-- <span id="citizenship-conditional-hint" class="govuk-hint">
-                Select all options that are relevant to your client.
-              </span> -->
+              <div class="govuk-!-padding-bottom-6"></div>
+              <div class="govuk-form-group">
+              <p>You have already told us you have the following online accounts:</p>
+              </div>
+
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Type</th>
+                    <th class="govuk-table__header" scope="col">Account number</th>
+                    <th class="govuk-table__header" scope="col">Sort code</th>
+                    <th class="govuk-table__header" scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row">Current</th>
+                      <td class="govuk-table__cell">10000000</td>
+                      <td class="govuk-table__cell">01-21-31</td>
+                      <td class="govuk-table__cell">£17.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row">Savings</th>
+                      <td class="govuk-table__cell">20000000</td>
+                      <td class="govuk-table__cell">01-21-31</td>
+                      <td class="govuk-table__cell">£34.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row">Current</th>
+                      <td class="govuk-table__cell">30000000</td>
+                      <td class="govuk-table__cell">01-21-31</td>
+                      <td class="govuk-table__cell">£51.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row">Savings</th>
+                      <td class="govuk-table__cell">40000000</td>
+                      <td class="govuk-table__cell">01-21-31</td>
+                      <td class="govuk-table__cell">£68.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="row">Current</th>
+                      <td class="govuk-table__cell">50000000</td>
+                      <td class="govuk-table__cell">01-21-31</td>
+                      <td class="govuk-table__cell">£85.00</td>
+                    </tr>
+                </tbody>
+              </table>
 
               <div class="govuk-!-padding-bottom-4"></div>
 
@@ -44,10 +88,10 @@ Apply for legal aid - Other capital
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="second-property" type="checkbox" value="yes" data-aria-controls="conditional-citizenship-conditional-1" {{ checked("second-property","yes") }}>
                   <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-                    Bank, building society, Post Office and ISA accounts
+                    Post Office, ISAs and other savings accounts
                   </label>
                   <span id="nationality-1-item-hint" class="govuk-hint govuk-checkboxes__hint" style="padding-left: 15px">
-                      Include any money in current and savings accounts
+                      Accounts you do not access with online banking
                   </span>
                 </div>
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-1">
@@ -170,9 +214,6 @@ Apply for legal aid - Other capital
             Continue
           </button>
 
-          <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
-            Save as draft
-          </a>
         </form>
       </div>
     </div>
