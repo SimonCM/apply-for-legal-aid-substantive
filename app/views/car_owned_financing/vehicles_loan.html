@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Correspondence address lookup
+Apply for legal aid - Costs
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,41 +17,46 @@ Apply for legal aid - Correspondence address lookup
 
   {{ govukBackLink({
     text: "Back",
-      href: "/passported_v2/client_details"
+      href: "/passported_v2/statement_1"
   }) }}
 {% endblock %}
 
 {% block content %}
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Enter a correspondence address for your client</h1>
+    <h1 class="govuk-heading-xl">How much does your client owe on the vehicle?</h1>
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Enter an amount
+    </legend>
+   <span class="govuk-hint">
+      This is the amount left to pay on any loans or hire purchase agreements.
+    </span>
 
-        <form action="postcode_select" method="post" novalidate>
-          <div class="govuk-form-group">
+    <form action="vehicles_date" method="post" novalidate>
+      <div class="govuk-form-group">
 
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="postcode"> Postcode
-            </legend>
 
-              <span id="postcode-hint" class="govuk-hint">
-                This must be a valid UK postcode.
-              </span>
+        <!--  <span id="postcode-hint" class="govuk-hint">
+            Include profit costs, disbursements, expert costs and counsel fees.
+          </span> -->
 
-            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text" value="{{ data['postcode'] }}">
-          </div>
 
-          <button type="submit" class="govuk-button">
-            Find address
-          </button>
-
-          <p>
-            <a class="govuk-link" href="/passported_v2/manual_address">Enter address manually</a>
-          </p>
-
-        </form>
+        <span class="govuk-body govuk-!-font-weight-bold govuk-currency-input__inner">£</span>
+        <input class="govuk-input govuk-!-width-one-third govuk-currency-input__input" id="costs" name="costs" type="text" value="{{ data['costs'] }}">
       </div>
-    </div>
+
+      <button type="submit" class="govuk-button">
+        Continue
+      </button>
+
+      <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
+        Save as draft
+      </a>
+
+    </form>
+  </div>
+</div>
 
 {% endblock %}
 
