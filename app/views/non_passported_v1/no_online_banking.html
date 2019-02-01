@@ -4,18 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Income start page
-{% endblock %}
-
-{% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Apply for legal aid",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+Apply for legal aid - Yes page
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,40 +15,26 @@ Apply for legal aid - Income start page
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 
-  {{ govukBackLink({
-  text: "Back",
-  href: "other_bank_radios"
-}) }}
-
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Income start page</h1>
+      <div class="govuk-grid-column-two-thirds">
 
-    <form action="types_of_income" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  No online banking
+                </h1>
+              </legend>
+                <p class="govuk-body-l">Redirect to CCMS<p>
+            </fieldset>
+          </div>
 
-      <p class="govuk-body">We will now ask you about all the income you receive.</p>
-
-      <h2 class="govuk-heading-m">What you need to do</h2>
-
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Select the type of income you receive.</li>
-              <li>Go through your bank statments selecting the income.</li>
-              <li>Ensure you have shown all the income you receive.</li>
-            </ul>
-
-            <div class="govuk-!-padding-bottom-4"></div>
-
-    <button type="submit" class="govuk-button">
-      Continue
-    </button>
-
-    </form>
-  </div>
-</div>
+      </div>
+    </div>
 
 {% endblock %}
 
