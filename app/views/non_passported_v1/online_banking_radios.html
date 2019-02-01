@@ -25,7 +25,7 @@ Apply for legal aid - Does your client use online banking
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <!-- <form action="online_banking_declaration" method="post" class="form">
+        <form action="/non_passported_v1/online_banking_declaration" method="get" class="form">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -39,15 +39,15 @@ Apply for legal aid - Does your client use online banking
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="online-banking-1" name="online-banking" type="radio" value="yes" {{ checked("online-banking","yes") }}>
-                  <label class="govuk-label govuk-radios__label" for="online-banking-1">
+                  <input class="govuk-radios__input" id="onlinebank-1" name="onlinebank" type="radio" value="yes" {{ checked("online-banking","yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="onlinebank-1">
                     Yes
 
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="online-banking-2" name="online-banking" type="radio" value="no" {{ checked("online-banking","no") }}>
-                  <label class="govuk-label govuk-radios__label" for="online-banking-2">
+                  <input class="govuk-radios__input" id="onlinebank-2" name="onlinebank" type="radio" value="no" {{ checked("online-banking","no") }}>
+                  <label class="govuk-label govuk-radios__label" for="onlinebank-2">
                     No
 
                   </label>
@@ -63,51 +63,6 @@ Apply for legal aid - Does your client use online banking
           <a role="button" style="margin-left: 15px;" class="govuk-button draft-button">
             Save as draft
           </a>
-        </form> -->
-
-        <form action="/docs/examples/over-18" method="get" class="form">
-
-          <h1 class="govuk-heading-xl">
-            Branching
-          </h1>
-
-          <p>
-            You may want to show a user different pages, depending on how they've answered a question.
-          </p>
-
-          <p>
-            You can see the code for this example here:
-          </p>
-
-          <pre class="app-code"><code>/docs/documentation_routes.js
-        /docs/views/examples/branching.html</code></pre>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                Are you 18 or over?
-              </h2>
-            </legend>
-            <div class="govuk-radios govuk-radios--inline">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="over18-1" name="over18" type="radio" value="true">
-                <label class="govuk-label govuk-radios__label" for="over18-1">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="over18-2" name="over18" type="radio" value="false">
-                <label class="govuk-label govuk-radios__label" for="over18-2">
-                  No
-                </label>
-              </div>
-            </div>
-            </fieldset>
-          </div>
-
-          <button class="govuk-button">Continue</button>
-
         </form>
 
       </div>

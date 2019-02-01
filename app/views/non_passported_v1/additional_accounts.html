@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Other bank accounts
+Apply for legal aid - Additional accounts
 {% endblock %}
 
 {% block header %}
@@ -28,7 +28,7 @@ Apply for legal aid - Other bank accounts
 
   {{ govukBackLink({
     text: "Back",
-      href: "citizen_accounts"
+      href: "other_bank_radios"
   }) }}
 {% endblock %}
 
@@ -42,24 +42,24 @@ Apply for legal aid - Other bank accounts
             <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Do you have accounts with other banks?
+                  Do you have online access to your accounts with other banks?
                 </h1>
               </legend>
               <div class="govuk-!-padding-bottom-4"></div>
               <span id="citizenship-conditional-hint" class="govuk-hint">
-                Share details of any accounts you have with another bank or building society
+                If you do not, you will need to provide paper evidence for these accounts.
               </span>
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="otherbank-1" name="otherbank" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="otherbank-1">
+                  <input class="govuk-radios__input" id="additionalaccount-1" name="additionalaccount" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="additionalaccount-1">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="otherbank-2" name="otherbank" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="otherbank-2">
+                  <input class="govuk-radios__input" id="additionalaccount-2" name="additionalaccount" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="additionalaccount-2">
                     No
                   </label>
                 </div>
