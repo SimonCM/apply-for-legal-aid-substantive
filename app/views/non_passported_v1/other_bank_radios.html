@@ -7,6 +7,17 @@
 Apply for legal aid - Other bank accounts
 {% endblock %}
 
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Apply for legal aid",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
@@ -25,7 +36,7 @@ Apply for legal aid - Other bank accounts
 
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <form action="income_start" method="post" class="form">
+        <form action="income_start" method="get" class="form">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
@@ -36,21 +47,19 @@ Apply for legal aid - Other bank accounts
               </legend>
               <div class="govuk-!-padding-bottom-4"></div>
               <span id="citizenship-conditional-hint" class="govuk-hint">
-            <!--    Share details of any accounts you have with another bank or building society -->
+                Share details of any accounts you have with another bank or building society
               </span>
-
-            <!--  <div class="govuk-!-padding-bottom-6"></div> -->
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-bank-1" name="other-bank" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="other-bank-1">
+                  <input class="govuk-radios__input" id="otherbank-1" name="otherbank" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="otherbank-1">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other-bank-2" name="other-bank" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="other-bank-2">
+                  <input class="govuk-radios__input" id="otherbank-2" name="otherbank" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="otherbank-2">
                     No
                   </label>
                 </div>

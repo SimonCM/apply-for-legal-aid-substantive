@@ -17,7 +17,7 @@ Apply for legal aid - Check your answers
 
   {{ govukBackLink({
     text: "Back",
-      href: "applicant_type"
+      href: "search_2"
   }) }}
 {% endblock %}
 
@@ -28,6 +28,26 @@ Apply for legal aid - Check your answers
       <h1 class="govuk-heading-xl">
         Check your answers
       </h1>
+
+      <h2 class="govuk-heading-m">
+        Scope of legal aid
+      </h2>
+
+    <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Proceeding
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Non-molestation order{{ data['...'] }}
+        </dd>
+        <dd class="app-check-your-answers__change">
+          <a href="search#search">
+            Change <span class="govuk-visually-hidden">proceeding</span>
+          </a>
+        </dd>
+      </div>
+   </dl>
 
      <h2 class="govuk-heading-m">
        Client details
@@ -65,7 +85,7 @@ Apply for legal aid - Check your answers
            Date of birth
          </dt>
          <dd class="app-check-your-answers__answer">
-           {{ data['dob-day'] }}/{{ data['dob-month'] }}/{{ data['dob-year'] }}
+           01 January 1980
          </dd>
          <dd class="app-check-your-answers__change">
            <a href="client_details#dob-day">
@@ -113,39 +133,6 @@ Apply for legal aid - Check your answers
          </dd>
        </div>
     </dl>
-
-    <h2 class="govuk-heading-m">
-      Scope of legal aid
-    </h2>
-
-  <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question">
-        Proceeding
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Non-molestation order{{ data['...'] }}
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="search#search">
-          Change <span class="govuk-visually-hidden">proceeding</span>
-        </a>
-      </dd>
-    </div>
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question">
-        Client involvement type
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Applicant{{ data['...'] }}
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="search#search">
-          Change <span class="govuk-visually-hidden">proceeding</span>
-        </a>
-      </dd>
-    </div>
- </dl>
 
     <h2 class="govuk-heading-m">Check your client's benefits status</h2>
 
