@@ -4,7 +4,7 @@
 {% from "footer/macro.njk" import govukFooter %}
 
 {% block pageTitle %}
-Apply for legal aid - Feedback
+Apply for legal aid - Income start page
 {% endblock %}
 
 {% block header %}
@@ -23,32 +23,43 @@ Apply for legal aid - Feedback
     tag: {
       text: "prototype"
     },
-    html: 'This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.'
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "other_bank_radios"
+}) }}
 
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Income start page</h1>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  Thank you for your feedback
-                </h1>
-              </legend>
-              <div class="govuk-!-padding-bottom-6"></div>
-              <span class="govuk-body">
-                <a href="#">Back to  your application</a>
-              </span>
-            </fieldset>
-          </div>
+    <form action="types_of_income" method="post" novalidate>
 
-      </div>
-    </div>
+      <p class="govuk-body">We will now ask you about all the income you receive.</p>
+
+      <h2 class="govuk-heading-m">What you need to do</h2>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Select the type of income you receive.</li>
+              <li>Go through your bank statments selecting the income.</li>
+              <li>Ensure you have shown all the income you receive.</li>
+            </ul>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+
+    </form>
+  </div>
+</div>
 
 {% endblock %}
 
@@ -61,7 +72,7 @@ Apply for legal aid - Feedback
               text: "Contact"
             },
             {
-              href: "feedback",
+              href: "#",
               text: "Feedback"
             },
             {
