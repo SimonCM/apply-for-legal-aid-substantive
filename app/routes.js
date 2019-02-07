@@ -45,6 +45,15 @@ router.get('/proceeding_flow/search', function (req, res) {
 
 })
 
+router.get('/limitations/search', function (req, res) {
+
+  res.render('limitations/search',
+    {
+      proceedings: utils.getProceedings()
+    })
+
+})
+
 
 // CAPITAL Branching
 router.get('/capital', function (req, res) {
