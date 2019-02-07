@@ -29,11 +29,24 @@ $('#search').hideseek({
 
   {{ govukBackLink({
     text: "Back",
-      href: "postcode_select"
+      href: "#"
   }) }}
 {% endblock %}
 
 {% block content %}
+
+<!-- <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#name">Search and select a proceeding</a>
+      </li>
+    </ul>
+  </div>
+</div> -->
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -41,17 +54,17 @@ $('#search').hideseek({
       </div>
     </div>
 
-    <div class="govuk-grid-row">
+    <!-- <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
     <table class="govuk-table">
-        <h2 class="govuk-heading-m">You have selected 1 proceeding</h2>
+        <h2 class="govuk-heading-m">You have selected 1 proceeding:</h2>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th class="govuk-table__cell govuk-body" scope="row"><h3 class="govuk-body proceeding-item">Non-molestation order</h3>
             <li class="govuk-caption-m proceeding__list-item">Family</li>
             <li class="govuk-caption-m proceeding__list-item"> > Domestic abuse</li></th>
-                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="search">
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">
                   Remove <span class="govuk-visually-hidden">blank</span>
                 </a></td>
             </tr>
@@ -60,7 +73,7 @@ $('#search').hideseek({
       </div>
       </div>
 
-      <div class="govuk-!-padding-bottom-4"></div>
+      <div class="govuk-!-padding-bottom-4"></div> -->
 
     <div id="search-field" class="govuk-form-group">
 
@@ -96,7 +109,7 @@ $('#search').hideseek({
             </div>
 
             <div class="govuk-grid-column-one-third" style="text-align:right; padding-top: 25px;">
-                <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="#">
+                <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="search_2">
                     Select
                 </a>
             </div>
@@ -109,7 +122,7 @@ $('#search').hideseek({
 </div>
 
 
-<a class="govuk-button" href="check_answers" role="button">
+<a class="govuk-button" href="#" role="button">
   Continue
 </a>
 
