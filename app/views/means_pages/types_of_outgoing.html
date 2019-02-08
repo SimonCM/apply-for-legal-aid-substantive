@@ -31,13 +31,16 @@ Apply for legal aid - Types of outgoing
             <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  What do you pay out each month?
+                  <!-- What do you pay out each month? -->
+                  Select all your monthly payments
                 </h1>
               </legend>
 
               <div class="govuk-!-padding-bottom-4"></div>
               <span id="citizenship-conditional-hint" class="govuk-hint">
-                Please tick all types of outgoings you have.
+              <!--  Please tick all types of outgoings you have. -->
+              Do not select any if you make no monthly payments.
+
               </span>
 
               <div class="govuk-!-padding-bottom-4"></div>
@@ -53,7 +56,7 @@ Apply for legal aid - Types of outgoing
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="income-conditional-2" name="benefits" type="checkbox" value="yes" data-aria-controls="income-conditional-2" {{ checked("benefits","yes") }}>
                   <label class="govuk-label govuk-checkboxes__label" for="income-conditional-2">
-                    Council tax
+                    Council Tax
                   </label>
                 </div>
 
