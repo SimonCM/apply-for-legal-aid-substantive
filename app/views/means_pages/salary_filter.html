@@ -35,20 +35,54 @@ Apply for legal aid - Salary statement
 {% block content %}
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-two-thirds">
 
           <h1 class="govuk-heading-xl">
-            Select your income from salary and wages
+            Select your salary and wages
           </h1>
 
+          <!-- <p class="govuk-body">Name: <strong> John Doe </strong> <br> Case reference: <strong> 2018/LAA/4ewrqfdd </strong> <br> Your solicitor: <strong> Hitchcock, Jones & King </strong></p> -->
+          <p class="govuk-body">Placeholder: Might need to say this is from multiple banks and aggregate by highest value.</p>
+          <div class="govuk-!-padding-bottom-4"></div>
+
+
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h3 class="govuk-heading-m">Add selected transaction to</h3>
+            <div class="govuk-form-group">
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="help" selected>Select a category</option>
+              <option value="wages">Salary or wages</option>
+              <option value="benefits">Benefits</option>
+              <option value="maintenance">Maintenance received from ex-partner</option>
+              <option value="lodger">Income from property or lodger</option>
+              <option value="student_loan">Student loan or grant</option>
+              <option value="pension">Pension</option>
+              <option value="help">Financial help from family or friends</option>
+              <option value="remove">Remove category</option>
+            </select>
+          </div>
+            <input class="govuk-button" type="submit" value="Submit changes">
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+          <div class="govuk-!-padding-bottom-5"></div>
+
           <table class="govuk-table">
-            <h2 class="govuk-heading-m">Space for heading</h2>
+            <caption class="govuk-table__caption">01 January to 31 January 2019</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th class="govuk-table__header"></th>
+                <th class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="income-1" name="income" type="checkbox" value="">
+                    <label class="govuk-label govuk-checkboxes__label" for="income-1"></label>
+                  </div></th>
                 <th class="govuk-table__header" scope="col">Date</th>
                 <th class="govuk-table__header" scope="col">Description</th>
-                <th class="govuk-table__header" scope="col">Amount</th>
+                <th class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold" scope="col">Amount</th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -205,8 +239,10 @@ Apply for legal aid - Salary statement
             </tbody>
           </table>
 
-          </div>
-          </div>
+
+
+<div class="govuk-!-padding-bottom-8"></div>
+
 
           <a href="means_home"<button type="submit" class="govuk-button">
             Save and return
